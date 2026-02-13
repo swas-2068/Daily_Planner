@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>smart daily Planner</title>>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>🌸 Smart Daily Planner</h1>
+
+<p id="todayDate"></p>
+<p id="quote"></p>
+
+ <h2> Today's schedule (Morning to Night)</h2>
+
+<input type="text" id="taskInput" placeholder="Enter your task">
+<input type="time" id="taskTime">
+
+<select id="priority">
+    <option value="High">🔥 High</option>
+    <option value="Medium">⭐ Medium</option>
+    <option value="Low">🌿 Low</option>
+</select>
+
+<button onclick="addTask()">Add Task</button>
+
+<ul id="taskList"></ul>
+
+<div class="progress-container">
+     <div id="progressBar"></div>
+</div>
+
+<p id="progressText"></p>
+
+<script src="script.js"></script>
+</body>
+</html>

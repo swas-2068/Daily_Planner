@@ -128,13 +128,13 @@ All processing happens inside the browser, so no wiring or hardware assembly is 
 <img src="images/Screenshot-2026-02-14-044901.png" width="600">
 
 ![Screenshot2]
-<img src="Screenshot-2026-02-14-044919.png" width="600">
+<img src="images/Screenshot-2026-02-14-044919.png" width="600">
 
 ![Screenshot3]
-<img src="Screenshot-2026-02-14-044938.png" width="600">
+<img src="images/Screenshot-2026-02-14-044938.png" width="600">
 
 ![Screenshot4]
-<img src="creenshot-2026-02-14-044952.png" width="600">
+<img src="images/creenshot-2026-02-14-044952.png" width="600">
 
 #### Diagrams
 

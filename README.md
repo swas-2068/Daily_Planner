@@ -124,17 +124,10 @@ All processing happens inside the browser, so no wiring or hardware assembly is 
 
 #### Screenshots (Add at least 3)
 
-![Screenshot1]
-<img src="images/Screenshot-2026-02-14-044901.png" width="600">
-
-![Screenshot2]
-<img src="images/Screenshot-2026-02-14-044919.png" width="600">
-
-![Screenshot3]
-<img src="images/Screenshot-2026-02-14-044938.png" width="600">
-
-![Screenshot4]
-<img src="images/creenshot-2026-02-14-044952.png" width="600">
+![Screenshot 1](images/Screenshot-2026-02-14-044901.png)
+![Screenshot 2](images/Screenshot-2026-02-14-044919.png)
+![Screenshot 3](images/Screenshot-2026-02-14-044938.png)
+![Screenshot 4](images/Screenshot-2026-02-14-044952.png)
 
 #### Diagrams
 

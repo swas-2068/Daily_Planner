@@ -1,84 +1,178 @@
-/* Background */
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #89f7fe, #66a6ff);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px;
-    min-height: 100vh;
+font-family: Arial;
+background: #f4f6f8;
+padding: 20px;
 }
 
-/* Main Heading */
 h1 {
-    color: white;
-    font-size: 32px;
-    margin-bottom: 10px;
+text-align: center;
 }
 
-/* Quote */
-#quote {
-    color: #f0f0f0;
-    font-style: italic;
-    margin-bottom: 20px;
+#datetime {
+text-align: center;
+font-size: 18px;
+margin-bottom: 15px;
 }
 
-/* Input & Dropdown */
-input, select {
-    padding: 10px;
-    border-radius: 8px;
-    border: none;
-    margin: 5px;
-    width: 180px;
+.container {
+max-width: 900px;
+margin: auto;
 }
-/* Button */
+
+section {
+background: white;
+padding: 15px;
+margin-bottom: 20px;
+border-radius: 8px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+input {
+width: 95%;
+padding: 8px;
+margin: 5px 0;
+}
+
 button {
-    padding: 10px 15px;
-    border-radius: 8px;
-    border: none;
-    background-color: #222;
-    color: white;
-    cursor: pointer;
-    transition: 0.3s;
+padding: 8px 12px;
+cursor: pointer;
+}
+
+.time-block {
+display: flex;
+gap: 10px;
+align-items: center;
+}
+
+.time-block span {
+width: 70px;
+}
+
+ul {
+list-style: none;
+padding: 0;
+}
+
+li {
+background: #e8f0fe;
+margin: 5px 0;
+padding: 8px;
+border-radius: 5px;
+display: flex;
+justify-content: space-between;
+}
+
+.removeBtn {
+background: rgb(55, 0, 255);
+color: rgb(202, 97, 97);
+border: none;
+cursor: pointer;
+}
+body {
+font-family: 'Poppins', sans-serif;
+margin: 0;
+padding: 20px;
+background: linear-gradient(135deg, #667eea, #764ba2);
+color: #333;
+}
+
+.main-title {
+text-align: center;
+font-size: 36px;
+color: white;
+margin-bottom: 10px;
+}
+
+#datetime {
+text-align: center;
+color: white;
+margin-bottom: 20px;
+font-weight: 500;
+}
+
+.container {
+max-width: 1000px;
+margin: auto;
+display: grid;
+gap: 20px;
+}
+
+.card {
+padding: 18px;
+border-radius: 15px;
+background: rgba(255,255,255,0.9);
+box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+transition: transform 0.2s ease;
+}
+
+.card:hover {
+transform: scale(1.02);
+}
+
+/* Section heading colors */
+
+.priorities h2 { color: #ff6b6b; }
+.schedule h2 { color: #4ecdc4; }
+.focus h2 { color: #ff9f43; }
+.revision h2 { color: #1dd1a1; }
+.reminder h2 { color: #5f27cd; }
+
+input {
+width: 95%;
+padding: 10px;
+margin: 6px 0;
+border-radius: 8px;
+border: none;
+background: #f1f2f6;
+font-size: 14px;
+}
+
+button {
+padding: 10px 14px;
+border: none;
+border-radius: 8px;
+background: linear-gradient(45deg, #ff9f43, #ff6b6b);
+color: white;
+cursor: pointer;
+font-weight: bold;
+transition: 0.2s;
 }
 
 button:hover {
-    background-color: #444;
-    transform: scale(1.05);
+opacity: 0.85;
 }
 
-/* Task List */
+.time-block {
+display: flex;
+gap: 10px;
+align-items: center;
+margin-bottom: 5px;
+}
+
+.time-block span {
+width: 70px;
+font-weight: bold;
+}
+
 ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-    width: 300px;
+list-style: none;
+padding: 0;
 }
 
-/* Each Task */
 li {
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(5px);
-    transition: 0.3s;
+background: #dfe4ea;
+margin: 5px 0;
+padding: 8px;
+border-radius: 6px;
+display: flex;
+justify-content: space-between;
 }
 
-li:hover {
-    transform: scale(1.03);
-}
-
-/* Delete Button */
-li button {
-    background-color: rgb(45, 70, 151);
-    padding: 5px 8px;
-    font-size: 12px;
-}
-
-li button:hover {
-    background-color: rgb(0, 139, 19);
+.removeBtn {
+background: #ff4757;
+color: white;
+border: none;
+padding: 4px 8px;
+cursor: pointer;
+border-radius: 5px;
 }

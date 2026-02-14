@@ -74,7 +74,7 @@ List the key features of your project:
 
 #### Installation
 ```bash
-[Installation commands - e.g., npm install, pip install -r requirements.txt]
+git clone <repo link>
 ```
 
 #### Run

@@ -1,97 +1,138 @@
-// Motivational Quotes
-const quotes = [
-    "✨ Believe in yourself!",
-    "🚀 Small progress is still progress.",
-    "🌟 You are capable of amazing things.",
-    "🔥 Stay consistent.",
-    "💡 Focus on your goals."
-];
+// ---------- Date & Time ----------
+function updateTime() {
+let now = new Date();
+document.getElementById("datetime").innerText =
+now.toLocaleString();
+}
+setInterval(updateTime, 1000);
+updateTime();
 
-// Show random quote
-document.getElementById("quote").innerText =
-    quotes[Math.floor(Math.random() * quotes.length)];
+// ---------- Task Handling ----------
+function addTask(inputId, listId) {
+let input = document.getElementById(inputId);
+let text = input.value.trim();
 
+if (!text) return;
 
-// Load tasks on refresh
-window.onload = function() {
-    let savedTasks = localStorage.getItem("tasks");
-    if (savedTasks) {
-        document.getElementById("taskList").innerHTML = savedTasks;
-    }
+let li = document.createElement("li");
+li.textContent = text;
+
+let btn = document.createElement("button");
+btn.textContent = "X";
+btn.className = "removeBtn";
+
+btn.onclick = () => li.remove();
+
+li.appendChild(btn);
+document.getElementById(listId).appendChild(li);
+
+input.value = "";
+}
+
+// Button listeners
+document.getElementById("addFocusBtn").onclick =
+() => addTask("focusInput", "focusList");
+
+document.getElementById("addRevisionBtn").onclick =
+() => addTask("revisionInput", "revisionList");
+
+// ---------- Reminder Notification ----------
+function requestPermission() {
+if ("Notification" in window && Notification.permission !== "granted") {
+Notification.requestPermission();
+}
+}
+
+requestPermission();
+
+document.getElementById("setReminderBtn").onclick = () => {
+
+let time = document.getElementById("reminderTime").value;
+let text = document.getElementById("reminderText").value || "Reminder!";
+
+if (!time) return alert("Select reminder time");
+
+let [hours, minutes] = time.split(":");
+
+let now = new Date();
+let reminder = new Date();
+
+reminder.setHours(hours, minutes, 0);
+
+let delay = reminder - now;
+
+if (delay < 0) {
+alert("Time already passed!");
+return;
+}
+
+setTimeout(() => {
+new Notification(text);
+}, delay);
+
+alert("Reminder set!");
 };
+// Live Date & Time
+function updateTime() {
+let now = new Date();
+document.getElementById("datetime").innerText =
+now.toLocaleString();
+}
+setInterval(updateTime, 1000);
+updateTime();
 
+// Add Tasks
+function addTask(inputId, listId) {
+let input = document.getElementById(inputId);
+let text = input.value.trim();
 
-function addTask() {
-    let taskInput = document.getElementById("taskInput");
-    let priority = document.getElementById("priority").value;
-    let taskText = taskInput.value;
+if (!text) return;
 
-    if (taskText === "") {
-        alert("Please enter a task!");
-        return;
-    }
+let li = document.createElement("li");
+li.textContent = text;
 
-    let li = document.createElement("li");
+let btn = document.createElement("button");
+btn.textContent = "X";
+btn.className = "removeBtn";
 
-    li.innerHTML = `
-        <span
-     onclick="toggleTask(this)">
-            ${taskText} - <b>$
-    {priority}</b>
-             </span>
-             <button
-     onclick="deleteTask(this)">❌</button>
-    `;
+btn.onclick = () => li.remove();
 
-    // Add color based on priority
-    if (priority === "High")
- li.style.backgroundColor = "#ffcccc";
-    if (priority === "Medium")
- li.style.backgroundColor = "#fff0b3";
-    if (priority === "Low")
-li.style.backgroundColor = "#ccffcc";
+li.appendChild(btn);
+document.getElementById(listId).appendChild(li);
 
-
-    document.getElementById("taskList").appendChild(li);
-
-    taskInput.value = "";
-
-    saveTasks();
+input.value = "";
 }
 
-function toggletask(button){
-    element.style.textdecoration=
-"line-through";
-    element.style.color= "gray";
+document.getElementById("addFocusBtn").onclick =
+() => addTask("focusInput", "focusList");
 
-    celebrate();
-    saveTasks();
+document.getElementById("addRevisionBtn").onclick =
+() => addTask("revisionInput", "revisionList");
+
+// Reminder Notifications
+if ("Notification" in window && Notification.permission !== "granted") {
+Notification.requestPermission();
 }
 
-function deleteTask(button) {
-    button.parentElement.remove();
-    saveTasks();
-}
+document.getElementById("setReminderBtn").onclick = () => {
 
+let time = document.getElementById("reminderTime").value;
+let text = document.getElementById("reminderText").value || "Reminder!";
 
-function saveTasks() {
-    localStorage.setItem("tasks",
+if (!time) return alert("Select reminder time");
 
- document.getElementById("taskList").innerHTML);
-}
+let [h, m] = time.split(":");
 
+let now = new Date();
+let reminder = new Date();
 
-// Simple celebration effect
-function celebrate() {
-    let emoji = document.createElement("div");
-    emoji.innerText = "🎉";
-    emoji.style.fontSize = "40px";
-    emoji.style.position = "fixed";
-    emoji.style.top = "50%";
-    emoji.style.left = "50%";
-    document.body.appendChild(emoji);
+reminder.setHours(h, m, 0);
 
-    setTimeout(() => {
-        emoji.remove();
-    }, 1000);
-}
+let delay = reminder - now;
+
+if (delay < 0) return alert("Time passed!");
+
+setTimeout(() => new Notification(text), delay);
+
+alert("Reminder set!");
+};

@@ -15,8 +15,7 @@
 - Member 2: SWASTHIKA V- ILAHIA COLLEGE OF ENGINEERING AND TECHNOLOGY
 
 ### Hosted Project Link
-[mention your project hosted link here]
-
+http://daily-planner-vert.vercel.app/
 ### Project Description
 This Daily Planner website helps users organize their day by managing priorities, schedules, focus sessions, and revision tasks in one place. It includes live date/time tracking and reminder notifications to improve productivity. The colorful interface makes planning simple and engaging.
 
@@ -124,10 +123,10 @@ All processing happens inside the browser, so no wiring or hardware assembly is 
 
 #### Screenshots (Add at least 3)
 
-![Screenshot 1](images/Screenshot-2026-02-14-044901.png)
-![Screenshot 2](images/Screenshot-2026-02-14-044919.png)
-![Screenshot 3](images/Screenshot-2026-02-14-044938.png)
-![Screenshot 4](images/Screenshot-2026-02-14-044952.png)
+![Screenshot 1](ss1.png)
+![Screenshot 2](ss2.png)
+![Screenshot 3](ss3.png)
+![Screenshot 4](ss4.png)
 
 #### Diagrams
 
